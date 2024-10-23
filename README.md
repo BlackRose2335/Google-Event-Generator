@@ -5,19 +5,18 @@ This script **automates** the creation of Google Calendar events based on data r
 ---
 ## 📚 Table of Contents
 
-- [✨ Features](#✨-features)
-- [📋 Prerequisites](#📋-prerequisites)
-- [⚙️ How It Works](#⚙️-how-it-works)
-- [🛠️ Configuration](#🛠️-configuration)
-- [📊 Spreadsheet Structure](#📊-spreadsheet-structure)
-- [📊 Sample Spreadsheet Table](#📊-sample-spreadsheet-table)
-- [🚀 How to Run the Script](#🚀-how-to-run-the-script)
-- [💡 Example of a Generated Event](#💡-example-of-a-generated-event)
-- [📝 Logging](#📝-logging)
-- [🔧 Customization](#🔧-customization)
-- [⚠️ Limitations](#⚠️-limitations)
+- [✨ Features](#-features)
+- [📋 Prerequisites](#-prerequisites)
+- [⚙️ How It Works](#-how-it-works)
+- [🛠️ Configuration](#-configuration)
+- [📊 Spreadsheet Structure](#-spreadsheet-structure)
+- [📊 Sample Spreadsheet Table](#-sample-spreadsheet-table)
+- [🚀 How to Run the Script](#-how-to-run-the-script)
+- [💡 Example of a Generated Event](#-example-of-a-generated-event)
+- [📝 Logging](#-logging)
+- [🔧 Customization](#-customization)
+- [⚠️ Limitations](#-limitations)
 - [📄 License](#📄-license)
-
 ---
 
 ## ✨ Features

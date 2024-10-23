@@ -121,7 +121,7 @@ When the script runs successfully, it generates events like the following:
       - Instructor: Jane Smith
       - E-mail: jane.smith@example.com
 
-![Example of a Generated Event](img/CalEventGenerator.png)
+![Example of a Generated Event](img/CalEventGenerator.png){ width="450" height="234" style="display:block; margin: 0 auto" }
 ---
 
 ## 📝 Logging

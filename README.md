@@ -111,7 +111,7 @@ This table illustrates the headers and example data required for the script to f
 
 When the script runs successfully, it generates events like the following:
 
-- **Event Name**: Workshop on JavaScript Basics  
+- **Event Name**: Calendar Event Creator
 - **Date**: 25.10.2024  
 - **Time**: 14:00 - 14:40  
 - **Description**:

@@ -37,14 +37,14 @@ function createSupportEvent() {
   
   const headers = data[1];
   const eventName = "XXX";
-  const eventNameIndex = headers.indexOf('Názov');
-  const timeIndex = headers.indexOf('Čas');
-  const dateIndex = headers.indexOf('Deň');
-  const actionIndex = headers.indexOf('čo treba');
-  const ownerIndex = headers.indexOf('owner podujatia');
-  const instructorIndex = headers.indexOf('lektor/ka');
-  const emailIndex = headers.indexOf('konto');
-  const suppIndex = headers.indexOf('supp');
+  const eventNameIndex = headers.indexOf('Name');
+  const timeIndex = headers.indexOf('Time');
+  const dateIndex = headers.indexOf('Date');
+  const actionIndex = headers.indexOf('Action');
+  const ownerIndex = headers.indexOf('Owner');
+  const instructorIndex = headers.indexOf('Instructor');
+  const emailIndex = headers.indexOf('E-mail');
+  const suppIndex = headers.indexOf('Support');
 
   const targetName = 'XXX';
   let eventCount = 0; 
@@ -110,11 +110,11 @@ function createSupportEvent() {
         }
 
         const description = `\
-        - Názov: ${row[eventNameIndex]}
-        - čo treba: ${action}
-        - owner podujatia: ${owner}
-        - lektor/ka: ${instructor}
-        - konto: ${email}
+        - Name: ${row[eventNameIndex]}
+        - Action: ${action}
+        - Meeting owner: ${owner}
+        - Instructor: ${instructor}
+        - E-mail: ${email}
         `;
         
         const event = calendar.createEvent(eventName, eventStartTime, eventEndTime, {

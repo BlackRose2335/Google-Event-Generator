@@ -1,6 +1,22 @@
 # 📅 Calendar Event Creator
 
-This script automates the creation of Google Calendar events based on data retrieved from a Google Spreadsheet. It is designed to scan a specific sheet, identify rows based on a "support" (`supp`) column, and create events in a designated Google Calendar.
+This script **automates** the creation of Google Calendar events based on data retrieved from a Google Spreadsheet. It is designed to scan a specific sheet, identify rows based on a "support" (`Support`) column, and create events in a designated Google Calendar.
+
+---
+## 📚 Table of Contents
+
+- [✨ Features](#✨-features)
+- [📋 Prerequisites](#📋-prerequisites)
+- [⚙️ How It Works](#⚙️-how-it-works)
+- [🛠️ Configuration](#🛠️-configuration)
+- [📊 Spreadsheet Structure](#📊-spreadsheet-structure)
+- [📊 Sample Spreadsheet Table](#📊-sample-spreadsheet-table)
+- [🚀 How to Run the Script](#🚀-how-to-run-the-script)
+- [💡 Example of a Generated Event](#💡-example-of-a-generated-event)
+- [📝 Logging](#📝-logging)
+- [🔧 Customization](#🔧-customization)
+- [⚠️ Limitations](#⚠️-limitations)
+- [📄 License](#📄-license)
 
 ---
 
@@ -36,7 +52,7 @@ This script automates the creation of Google Calendar events based on data retri
    - Column headers (like event name, date, time, owner, etc.)
 
 3. **Event Creation**  
-   The script scans the `supp` column, checks for a match with `targetName`, and creates an event in the calendar based on the row’s data.
+   The script scans the `Support` column, checks for a match with `targetName`, and creates an event in the calendar based on the row’s data.
 
 4. **Duplicate Event Prevention**  
    Before creating an event, the script checks the calendar for existing events in the same time window to avoid duplication.
@@ -58,14 +74,27 @@ You need to replace the following placeholders in the script before running it:
 
 The Google Spreadsheet must have the following columns with specific headers:
 
-- **Názov**: Event Name
-- **Čas**: Event Time (e.g., `09:00 - 10:00`)
-- **Deň**: Event Date (in `dd.MM.yyyy` format)
-- **čo treba**: Action or task description
-- **owner podujatia**: Event owner
-- **lektor/ka**: Instructor
-- **konto**: Email account responsible for the event
-- **supp**: Support identifier, which is compared to `targetName`
+- **Name**: Event Name
+- **Time**: Event Time (e.g., `09:00 - 10:00`)
+- **Date**: Event Date (in `dd.MM.yyyy` format)
+- **Action**: Action or task description
+- **Owner**: Event owner
+- **Instructor**: Instructor
+- **E-mail**: Email account responsible for the event
+- **Support**: Support identifier, which is compared to `targetName`
+
+---
+
+## 📊 Sample Spreadsheet Table
+
+Below is an example of how the data should be structured in your Google Spreadsheet:
+
+| Name                          | Time            | Date         | Action                   | Owner | Instructor    | E-mail                     | Support       |
+|--------------------------------|----------------|-------------|-----------------------------|-----------------|--------------|---------------------------|------------|
+| Workshop on JavaScript Basics   | 14:00 - 14:40  | 25.10.2024  | Prepare slides and handouts | John Doe        | Jane Smith   | jane.smith@example.com    | Support A  |
+| Advanced Python Course         | 09:00 - 10:00  | 26.10.2024  | Send out reading materials  | Alice Brown      | Mike Taylor  | mike.taylor@example.com   | Support B  |
+
+This table illustrates the headers and example data required for the script to function correctly.
 
 ---
 
@@ -76,6 +105,23 @@ The Google Spreadsheet must have the following columns with specific headers:
 3. Replace all placeholder values (`XXX`) with actual Calendar IDs, Spreadsheet URL, and Sheet name.
 4. Save and run the script.
 
+---
+
+## 💡 Example of a Generated Event
+
+When the script runs successfully, it generates events like the following:
+
+- **Event Name**: Workshop on JavaScript Basics  
+- **Date**: 25.10.2024  
+- **Time**: 14:00 - 14:40  
+- **Description**:
+   - Name: Workshop on JavaScript Basics
+      - Action: Prepare slides and handouts
+      - Meeting owner: John Doe
+      - Instructor: Jane Smith
+      - E-mail: jane.smith@example.com
+
+![Example of a Generated Event](img/CalEventGenerator.png)
 ---
 
 ## 📝 Logging
@@ -100,7 +146,7 @@ The script utilizes `Logger.log()` to track its operations. You can find informa
    The script assumes that the date format in the spreadsheet is `dd.MM.yyyy`. Modify the date parsing logic if your spreadsheet uses a different format.
 
 - **Event Duplication Check**  
-   The script checks for existing events on the same date and time based on the "Názov" in the event description, ensuring that events with the same name are not duplicated.
+   The script checks for existing events on the same date and time based on the "Name" in the event description, ensuring that events with the same name are not duplicated.
 
 ---
 

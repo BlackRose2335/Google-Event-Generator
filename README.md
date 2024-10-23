@@ -103,3 +103,7 @@ The script utilizes `Logger.log()` to track its operations. You can find informa
    The script checks for existing events on the same date and time based on the "Názov" in the event description, ensuring that events with the same name are not duplicated.
 
 ---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

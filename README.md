@@ -7,10 +7,10 @@ This script **automates** the creation of Google Calendar events based on data r
 
 - [✨ Features](#-features)
 - [📋 Prerequisites](#-prerequisites)
-- [⚙️ How It Works](#-how-it-works)
-- [🛠️ Configuration](#-configuration)
 - [📊 Spreadsheet Structure](#-spreadsheet-structure)
 - [📊 Sample Spreadsheet Table](#-sample-spreadsheet-table)
+- [⚙️ How It Works](#-how-it-works)
+- [🛠️ Configuration](#-configuration)
 - [🚀 How to Run the Script](#-how-to-run-the-script)
 - [💡 Example of a Generated Event](#-example-of-a-generated-event)
 - [📝 Logging](#-logging)
@@ -36,6 +36,34 @@ This script **automates** the creation of Google Calendar events based on data r
 
 2. **Google Apps Script Permissions**  
    This script requires permissions to access and manage your Google Calendar and Sheets.
+
+---
+
+## 📊 Spreadsheet Structure
+
+The Google Spreadsheet must have the following columns with specific headers:
+
+- **Name**: Event Name
+- **Time**: Event Time (e.g., `09:00 - 10:00`)
+- **Date**: Event Date (in `dd.MM.yyyy` format)
+- **Action**: Action or task description
+- **Owner**: Event owner
+- **Instructor**: Instructor
+- **E-mail**: Email account responsible for the event
+- **Support**: Support identifier, which is compared to `targetName`
+
+---
+
+## 📊 Sample Spreadsheet Table
+
+Below is an example of how the data should be structured in your Google Spreadsheet:
+
+| Name                          | Time            | Date         | Action                   | Owner | Instructor    | E-mail                     | Support       |
+|--------------------------------|----------------|-------------|-----------------------------|-----------------|--------------|---------------------------|------------|
+| Workshop on JavaScript Basics   | 14:00 - 14:40  | 25.10.2024  | Prepare slides and handouts | John Doe        | Jane Smith   | jane.smith@example.com    | Support A  |
+| Advanced Python Course         | 09:00 - 10:00  | 26.10.2024  | Send out reading materials  | Alice Brown      | Mike Taylor  | mike.taylor@example.com   | Support B  |
+
+This table illustrates the headers and example data required for the script to function correctly.
 
 ---
 
@@ -66,34 +94,6 @@ You need to replace the following placeholders in the script before running it:
 - `XXX` for Spreadsheet URL in `SpreadsheetApp.openByUrl('XXX')`: Replace with the URL of your Google Spreadsheet.
 - `XXX` for sheet name: Replace with the actual name of the sheet containing the event data.
 - `XXX` in `targetName`, `eventName`, etc.: Customize these based on your spreadsheet structure.
-
----
-
-## 📊 Spreadsheet Structure
-
-The Google Spreadsheet must have the following columns with specific headers:
-
-- **Name**: Event Name
-- **Time**: Event Time (e.g., `09:00 - 10:00`)
-- **Date**: Event Date (in `dd.MM.yyyy` format)
-- **Action**: Action or task description
-- **Owner**: Event owner
-- **Instructor**: Instructor
-- **E-mail**: Email account responsible for the event
-- **Support**: Support identifier, which is compared to `targetName`
-
----
-
-## 📊 Sample Spreadsheet Table
-
-Below is an example of how the data should be structured in your Google Spreadsheet:
-
-| Name                          | Time            | Date         | Action                   | Owner | Instructor    | E-mail                     | Support       |
-|--------------------------------|----------------|-------------|-----------------------------|-----------------|--------------|---------------------------|------------|
-| Workshop on JavaScript Basics   | 14:00 - 14:40  | 25.10.2024  | Prepare slides and handouts | John Doe        | Jane Smith   | jane.smith@example.com    | Support A  |
-| Advanced Python Course         | 09:00 - 10:00  | 26.10.2024  | Send out reading materials  | Alice Brown      | Mike Taylor  | mike.taylor@example.com   | Support B  |
-
-This table illustrates the headers and example data required for the script to function correctly.
 
 ---
 

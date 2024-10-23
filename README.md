@@ -1,4 +1,4 @@
-# 📅 Calendar Support Event Creator
+# 📅 Calendar Event Creator
 
 This script automates the creation of Google Calendar events based on data retrieved from a Google Spreadsheet. It is designed to scan a specific sheet, identify rows based on a "support" (`supp`) column, and create events in a designated Google Calendar.
 
@@ -100,6 +100,6 @@ The script utilizes `Logger.log()` to track its operations. You can find informa
    The script assumes that the date format in the spreadsheet is `dd.MM.yyyy`. Modify the date parsing logic if your spreadsheet uses a different format.
 
 - **Event Duplication Check**  
-   The script checks for existing events within a 20-minute window before the start and 40 minutes after the start of the event.
+   The script checks for existing events on the same date and time based on the "Názov" in the event description, ensuring that events with the same name are not duplicated.
 
 ---

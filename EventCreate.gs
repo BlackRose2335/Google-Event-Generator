@@ -12,6 +12,7 @@ function createSupportEvent() {
   const data = sheet.getDataRange().getValues();
   
   const headers = data[1];
+  const eventName = "XXX";
   const eventNameIndex = headers.indexOf('Názov');
   const timeIndex = headers.indexOf('Čas');
   const dateIndex = headers.indexOf('Deň');
@@ -21,7 +22,7 @@ function createSupportEvent() {
   const emailIndex = headers.indexOf('konto');
   const suppIndex = headers.indexOf('supp');
 
-  const targetName = 'XXX';  
+  const targetName = 'XXX';
   let eventCount = 0; 
   
   for (let i = 2; i < data.length; i++) {
@@ -38,8 +39,7 @@ function createSupportEvent() {
       Logger.log(`Row ${i}: supp = '${row[suppIndex]}'`);
 
       if (row[suppIndex].trim() === targetName) {
-        const eventName = "XXX";  
-        const meetingDetails = row[timeIndex];      
+        const meetingDetails = row[timeIndex];
         const action = row[actionIndex];
         const owner = row[ownerIndex];               
         const instructor = row[instructorIndex];     
@@ -75,13 +75,16 @@ function createSupportEvent() {
         Logger.log(`Row ${i}: Checking for existing events between ${eventStartTime} and ${eventEndTime}`);
         const existingEvents = calendar.getEvents(eventStartTime, eventEndTime);
         
-        const isDuplicate = existingEvents.some(event => event.getTitle() === eventName);
+        const isDuplicate = existingEvents.some(event => {
+          const description = event.getDescription();
+          return description.includes(row[eventNameIndex]); // Check if Názov is in the event description
+        });
         
         if (isDuplicate) {
-          Logger.log(`Row ${i}: Event already exists: ${eventName} on ${eventStartTime}. Skipping creation.`);
+          Logger.log(`Row ${i}: Event with Názov '${row[eventNameIndex]}' already exists. Skipping creation.`);
           continue; 
         }
-        
+
         const description = `\
         - Názov: ${row[eventNameIndex]}
         - čo treba: ${action}
@@ -91,7 +94,7 @@ function createSupportEvent() {
         `;
         
         const event = calendar.createEvent(eventName, eventStartTime, eventEndTime, {
-          description: description.trim()  
+          description: description.trim()
         });
         
         event.addPopupReminder(10);

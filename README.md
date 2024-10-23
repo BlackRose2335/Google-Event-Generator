@@ -104,6 +104,13 @@ This table illustrates the headers and example data required for the script to f
 2. Paste the provided script into the editor.
 3. Replace all placeholder values (`XXX`) with actual Calendar IDs, Spreadsheet URL, and Sheet name.
 4. Save and run the script.
+5. **Optional**: Set up a trigger to run the script automatically:
+   - In the Apps Script editor, click on the clock icon (Triggers).
+   - Click on “+ Add Trigger” in the bottom right corner.
+   - Select your function name from the dropdown (e.g., `createSupportEvent`).
+   - Choose the event source as “Time-driven”.
+   - Set the desired frequency (e.g., Hourly, Daily, etc.).
+   - Click “Save” to create the trigger.
 
 ---
 
@@ -122,6 +129,7 @@ When the script runs successfully, it generates events like the following:
       - E-mail: jane.smith@example.com
 
 ![Example of a Generated Event](img/CalEventGenerator.png)
+
 ---
 
 ## 📝 Logging

@@ -10,7 +10,7 @@ If you discover any security vulnerabilities in this project, please report them
 
 1. **Do not create a public issue**: To protect users, please avoid publicly disclosing vulnerabilities.
 2. **Contact us directly**: Reach out via Discord using the following information:
-   - Send a direct message to the user **XXX** with:
+   - Send a direct message to the user **blackrose2335#8749** with:
      - A detailed description of the vulnerability.
      - Steps to reproduce the issue.
      - The potential impact of the vulnerability.

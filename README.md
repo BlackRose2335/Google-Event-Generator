@@ -16,6 +16,8 @@ This script **automates** the creation of Google Calendar events based on data r
 - [📝 Logging](#-logging)
 - [🔧 Customization](#-customization)
 - [⚠️ Limitations](#-limitations)
+- [🔐 Security Policy](#-security-policy)
+- [🐞 Issue Reporting and Feature Requests](#-issue-reporting-and-feature-requests)
 - [📄 License](#-license)
 ---
 
@@ -162,6 +164,17 @@ The script utilizes `Logger.log()` to track its operations. You can find informa
 Please refer to our [Security Policy](./SECURITY.md) for details on how to report vulnerabilities.
 
 We encourage responsible disclosure of security vulnerabilities. If you discover any, please contact us directly via Discord. You can find the full guidelines for reporting in the [Security Policy](./SECURITY.md).
+
+---
+
+## 🐞 Issue Reporting and Feature Requests
+
+We welcome contributions and suggestions! If you encounter a bug or have a feature request, please use the provided templates for submitting your issues:
+
+- [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md)
+- [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md)
+
+To submit a bug report or feature request, visit our [GitHub Issues](https://github.com/your-repo/issues) page and select the appropriate template.
 
 ---
 

@@ -157,6 +157,14 @@ The script utilizes `Logger.log()` to track its operations. You can find informa
 
 ---
 
+## 🔐 Security Policy
+
+Please refer to our [Security Policy](./SECURITY.md) for details on how to report vulnerabilities.
+
+We encourage responsible disclosure of security vulnerabilities. If you discover any, please contact us directly via Discord. You can find the full guidelines for reporting in the [Security Policy](./SECURITY.md).
+
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
